@@ -30,8 +30,8 @@ export function RegisterForm() {
   type PatientDefaultValues = z.infer<typeof patientRegistrationSchema>;
 
   const defaultValues: PatientDefaultValues = {
-    name: "Mir",
-    email: "mir@gmail.com",
+    name: "supon",
+    email: "mahidimahidihassansupon@gmail.com",
     contactNumber: "01980594721",
     password: "@User123456",
     confirmPassword: "@User123456",
@@ -282,10 +282,10 @@ export function RegisterForm() {
       <GoogleLoginComponent />
 
       <div className="text-center text-sm text-muted-foreground">
-        Already have an account?{" "}
+        Already have an account? Plz{" "}
         <Link
           href="/login"
-          className="font-medium underline underline-offset-4 hover:text-primary"
+          className="font-medium underline text-primary underline-offset-4 hover:text-primary"
         >
           Login
         </Link>

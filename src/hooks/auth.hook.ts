@@ -26,6 +26,7 @@ import {
   userLogin,
   userLogOut,
   userRegistration,
+  verifyAccount,
 } from "@/api";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
@@ -34,6 +35,13 @@ export const useLogin = () => {
     mutationFn: userLogin,
   });
 };
+
+export const useVerifyAccount = () => {
+  return useMutation({
+    mutationFn: verifyAccount,
+  });
+};
+
 export const useRegistration = () => {
   return useMutation({
     mutationFn: userRegistration,
@@ -60,3 +68,4 @@ export const useGetMe = () => {
     refetchOnWindowFocus: false,
   });
 };
+

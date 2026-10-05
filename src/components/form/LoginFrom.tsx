@@ -18,6 +18,7 @@ import { Spinner } from "../ui/spinner";
 import { useLogin } from "@/hooks";
 
 import GoogleLoginO from "../modules/google-login/GoogleLogin";
+import Link from "next/link";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -27,8 +28,10 @@ export default function LoginForm() {
 
   const form = useForm({
     defaultValues: {
-      email: "superadmin@gmail.com",
-      password: "Super@admin12345",
+      email: "mahidimahidihasansupon@gmail.com",
+      password: "i?Q9oY6k6u",
+      // email: "superadmin@gmail.com",
+      // password: "Super@admin12345",
     },
     validators: {
       onSubmit: loginSchema,
@@ -156,6 +159,8 @@ export default function LoginForm() {
       <FieldSeparator>Or</FieldSeparator>
 
       <GoogleLoginO/>
+
+      <div>Don't have a account? Plz <Link href={"/register"} className="text-primary hover:text-primary border-b">Register</Link> </div>
     </div>
   );
 }
