@@ -18,7 +18,7 @@ import { Field, FieldDescription, FieldError, FieldLabel } from "../ui/field";
 import { useEffect, useState } from "react";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
 import { tr } from "zod/locales";
-import { useVerifyAccount, useVerifyDoctor } from "@/hooks";
+import { useVerifyAccount, useVerifyDoctorAccount } from "@/hooks";
 import { toast } from "../ui/toast";
 
 const RESEND_COOLDOWN = 120;
@@ -35,7 +35,7 @@ const VerifyAccountFrom = ({
   const [isInvalid, setIsInvalid] = useState(false);
   const [resendTimer, setResendTimer] = useState(RESEND_COOLDOWN);
   const { mutate: verifyPatient } = useVerifyAccount();
-  const { mutate: verifyDoctor } = useVerifyDoctor();
+  const { mutate: verifyDoctor } = useVerifyDoctorAccount();
 
   const verify = mode === "doctor" ? verifyDoctor : verifyPatient;
 
